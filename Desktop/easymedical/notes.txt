@@ -1,0 +1,35 @@
+http://www.4guysfromrolla.com/webtech/041399-1.shtml
+
+https://books.google.com.ng/books?id=JNHf0KgarRUC&pg=PA419&lpg=PA419&dq=check+input+before+submit+form+vbscript&source=bl&ots=3k5gFQsQH7&sig=ACfU3U01QYWfVpeRnbLUU7szup0_xX_puw&hl=en&sa=X&ved=2ahUKEwj6svLOp_rpAhXoyIUKHelBCuMQ6AEwD3oECAkQAQ#v=onepage&q=check%20input%20before%20submit%20form%20vbscript&f=false
+
+https://stackoverflow.com/questions/41124077/how-do-i-pass-a-form-value-to-different-redirect-pages
+
+https://www.webdeveloper.com/d/61106-how-to-call-a-asp-function-in-the-onclick-event
+<script LANGUAGE="vbscript">
+	Response.write("<h1>I am here</h1>")
+
+Dim frm
+
+Sub Window_Onload
+	/* 'Set frm =Document.InputForm */
+	Response.write("<h1>I am here</h1>")
+End Sub
+
+Function IsInputNumeric(input)
+	If Not IsNumeric(input.value) Then
+		Response.Write("<p>Input must be a number</p>")
+		input.focus
+		IsInputNumeric=False
+	Else
+		IsInputNumeric= True
+	End If
+End Function
+
+Sub button_click
+	Set CheckInput= frm.userInput
+	If Not IsInputNumeric(CheckInput) Then
+		Exit Sub
+	End If
+	frm.Submit
+End Sub
+</script>

@@ -1,0 +1,88 @@
+<!-- <HTML>
+<HEAD>
+<TITLE>Validate during input and prior to submission</TITLE>
+<SCRIPT LANGUAGE="vbscript">
+Dim frm1
+
+ Sub Window_OnLoad
+  Set frm1 = Document.Form1
+ End Sub
+
+ Function IsFieldNumeric(field)
+  If Not IsNumeric(field.value) Then
+   Alert "Entry must be numeric"
+   field.focus
+   IsFieldNumeric = False
+  Else
+   IsFieldNumeric = True 
+  End If
+ End Function
+ 
+ Function IsFieldaDate(field)
+  If Not IsDate(field.value) Then
+   Alert "Entry must be a date"
+   field.focus
+   IsFieldaDate = False
+  Else
+   IsFieldaDate = True 
+  End If
+ End Function
+
+ Sub text1_OnChange
+  Set ChkField = frm1.text1
+  x = IsFieldNumeric(ChkField)
+ End Sub
+
+ Sub text2_OnChange
+  Set ChkField = frm1.text2
+  x = IsFieldaDate(ChkField)
+ End Sub
+
+ Sub cmdButton1_OnClick
+  Set ChkField = frm1.text1
+  If Not IsFieldNumeric(ChkField) Then
+   Exit Sub
+  End If
+
+  Set ChkField = frm1.text2
+  If Not IsFieldaDate(ChkField) Then
+   Exit Sub
+  End If
+
+  frm1.submit
+
+ End Sub
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="white">
+<CENTER>
+<FORM NAME="Form1" ACTION="http://www.yourdomain.com/yourscript.etc" METHOD="POST">
+Enter a number &nbsp;
+<INPUT TYPE="text" NAME="text1"><P>
+Enter a date &nbsp;
+<INPUT TYPE="text" NAME="text2"><P>
+Enter your name &nbsp;
+<INPUT TYPE="text" NAME="text3"><P>
+<INPUT TYPE="button" NAME="cmdButton1" VALUE="Submit">
+</FORM>
+</CENTER>
+</BODY>
+</HTML> -->
+<!DOCTYPE html>
+<html>
+   <body>
+      <script language = "vbscript" type = "text/vbscript">
+         Function concatenate(first, last)
+            Dim full
+            full = first & last
+            concatenate = full  'Returning the result to the function name itself
+         End Function
+         ' Here is the usage of returning value from  function. 
+         dim result
+            result = concatenate("Zara", "Ali")
+        <h1>dsdsd</h1>
+      </script>
+
+   </body>
+</html>
